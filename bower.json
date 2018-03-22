@@ -1,0 +1,21 @@
+{
+  "name": "burgers",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "GrigorevVitaly"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/GrigorevVitaly/Burgers",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*"
+  }
+}

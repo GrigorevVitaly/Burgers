@@ -1,0 +1,87 @@
+.hero
+    background: url(../img/background/1st-bg.png) center center no-repeat
+    background-size: cover
+    height: 100vh
+
+header
+    display: flex
+    height: 85px
+    justify-content: space-between
+
+.logo 
+    padding-top: 12px
+
+.nav_item
+    display: inline-block
+    a 
+        text-decoration: none
+        color: #ffffff
+        font-family: $medium
+        font-size: 13px
+        text-transform: uppercase
+
+.nav_list
+    padding: 40px 0 0 160px
+    li
+        position: relative
+        padding-left: 20px
+        padding-right: 15px
+        &:before
+            content: ''
+            background-color: #ffffff
+            height: 5px
+            width: 5px
+            border-radius: 50%
+            display: block
+            position: absolute
+            left: 0
+            top: 50%
+        &:first-child:before
+            display: none
+
+
+.hero_content
+    display: flex
+    height: 100%
+    align-items: center
+
+.hero_content__left
+    display: flex
+    align-items: center
+    width: 50%
+    height: 100%
+    
+    
+.hero_content__right
+    display: flex
+    align-items: center
+    height: 100%
+    width: 50%
+    p 
+        font-family: $life
+        font-size: 65px
+        color: #ffffff
+        span 
+            font-family: $gregular
+            font-size: 72px
+            color: #f9b43b
+    
+.next_page_button
+    text-align: center
+    padding-bottom: 40px
+
+.button
+    height: 35px
+    width: 97px
+    background-color: #e45028
+    color: #ffffff
+    border-radius: 5px
+    border: none
+    margin-top: 33px
+    font-family: $medium
+    font-size: 13px
+    text-transform: uppercase
+    &:hover
+        background-color: #c1401e
+        cursor: pointer
+    
