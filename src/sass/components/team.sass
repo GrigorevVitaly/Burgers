@@ -1,0 +1,76 @@
+.team
+    height: 100vh
+    background: url(../../img/background/team-bg.png) center center no-repeat
+    background-size: cover
+
+.team_content
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 100%
+    width: 50%
+    right: 0
+    position: absolute
+    background-color: #2f3234
+    opacity: 0.93
+
+.team_content_title
+    font-family: $gregular
+    font-size: 72px
+    color: #f9b43b
+    text-align: center
+
+.team_acco_item_content
+    display: none
+
+.team_acco_item
+    padding-top: 20px
+    a 
+        text-decoration: none
+        color: #ffffff
+        font-family: $gregular
+        font-size: 14px
+        text-transform: uppercase
+        &:before
+            content: ''
+            width: 0
+            height: 0
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-top: 10px solid #f9b43b
+            position: absolute
+            margin: 7px 0 0 -13px
+
+.team_acco_item_active
+    a 
+        text-decoration: none
+        color: #f9b43b
+        font-family: $gregular
+        font-size: 14px
+        text-transform: uppercase
+        &:before
+            content: ''
+            width: 0
+            height: 0
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-top: 10px solid #f9b43b
+            position: absolute
+            margin: 7px 0 0 -13px
+            transform: rotate(180deg)
+    .team_acco_item_content
+        display: flex
+        padding-top: 10px
+    
+.team_acco_item_content_text
+    width: 215px
+    padding-left: 20px
+    h6 
+        font-family: $bold
+        font-size: 14px
+        text-transform: capitalize
+    p 
+        font-family: $light
+        font-size: 14px
+                    
+            
