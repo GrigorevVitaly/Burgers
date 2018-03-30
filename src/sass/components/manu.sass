@@ -1,46 +1,61 @@
 .menu
-    height: 100vh
     background: url(../../img/background/menu-bg.png) center center no-repeat
     background-size: cover
-.menu_content
+    height: 100vh
+
+.menu_container
     height: 100%
     position: relative
 
-.menu_title
+.menu_container_title
     font-family: $gregular
     font-size: 72px
     color: #ffffff
-    width: 50%
+    padding: 115px 0 0 95px
 
 .menu_acco
     display: flex
     position: absolute
-    width: 50%
     top: 0
     bottom: 0
     right: 0
-    a 
-        position: absolute
-        top: 47%
-        text-decoration: none
-        color: #ffffff
-        font-family: $gregular
-        font-size: 40px
-        transform: rotate(-90deg)
-        width: 100vh
-        background-size: cover
-
-.menu_acco_content
-    width: 0
-    overflow: hidden
-
-.menu_acco_content_text
-    width: auto
 
 .menu_acco_item
     display: flex
+
+.menu_acco_item_title
+    display: flex
+    align-items: flex-end
     width: 80px
+    h3 
+        margin: 0
+        font-family: $gregular
+        font-size: 40px
+        color: #ffffff
+        transform: rotate(-90deg)
+        transform-origin: 0 0
+        white-space: nowrap
+    &:first-child
+        background: url(../img/elements/meateat.png) center center no-repeat
+        background-size: cover
+    &:nth-child(1)
+        background: url(../img/elements/vega.png) center center no-repeat
+        background-size: cover
+
     
 
+.menu_acco_item_text
+    width: 0 
+    overflow: hidden
 
-
+.menu_acco_item_active
+    h3 
+        color: #f9b43b
+    .menu_acco_item_text
+        width: 700px
+        background: #2f3132
+        opacity: 0.93
+        padding: 60px 20px 0 20px
+        font-family: $light
+        font-size: 14px
+        color: #ffffff
