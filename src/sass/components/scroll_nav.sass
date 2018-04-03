@@ -1,0 +1,33 @@
+.scroll_nav
+    position: fixed
+    right: 51px
+    top: 27%
+    margin: 0
+    padding: 0
+    list-style: none
+    transform: translateY(-50%)
+    z-index: 100
+    li
+        padding: 7px
+        &.active
+            a:before
+                display: block
+    a 
+        display: block
+        height: 7px
+        width: 7px
+        background: #ffffff
+        border-radius: 50%
+        position: relative
+        &:before
+            display: none
+            position: absolute
+            content: ''
+            border: 1px solid #ffffff
+            border-radius: 50%
+            height: 15px
+            width: 15px
+            top: 50%
+            left: 50%
+            margin-left: -8.5px
+            margin-top: -8.5px

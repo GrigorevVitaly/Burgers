@@ -1,6 +1,8 @@
 'use strict';
 
 var gulp = require('gulp'),
+    gulpLoadPlugins = require('gulp-load-plugins'),
+    plugins = gulpLoadPlugins(),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
@@ -59,38 +61,38 @@ gulp.task('clean', function (cb) {
 
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
-        .pipe(rigger())
+        .pipe(plugins.rigger())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({ stream: true }));
 });
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
-        .pipe(rigger())
-        .pipe(sourcemaps.init())
-        .pipe(uglify())
-        .pipe(sourcemaps.write())
+        .pipe(plugins.rigger())
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.uglify())
+        .pipe(plugins.sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream: true }));
 });
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
-        .pipe(sourcemaps.init())
-        .pipe(sass({
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.sass({
             sourceMap: true,
             errLogToConsole: true
         }))
         .pipe(prefixer())
         .pipe(cssmin())
-        .pipe(sourcemaps.write())
+        .pipe(plugins.sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({ stream: true }));
 });
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        .pipe(imagemin({
+        .pipe(plugins.imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()],
